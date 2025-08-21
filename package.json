@@ -3,10 +3,13 @@
   "version": "0.2.0",
   "private": true,
   "type": "module",
+  "homepage": "https://kurusgeorge-ai.github.io/palestine-watch-ca",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
@@ -27,6 +30,7 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.7.0",
     "eslint": "^9",
+    "gh-pages": "^6.1.1",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vite": "^5.4.19"
